@@ -1,21 +1,23 @@
 import { createGlobalStyle, ThemeProvider } from 'styled-components'
+import { AlurakutStyles } from '../src/lib/AlurakutCommons';
 
 const GlobalStyle = createGlobalStyle`
- 
-  *{
+  /* Reset CSS (Necolas Reset CSS <3) */
+  * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
   }
-  
+
   body {
     font-family: sans-serif;
     background-color: #D9E6F6;
+    background-image: url("https://www.cleverfiles.com/howto/wp-content/uploads/2018/03/minion.jpg");
   }
 
   #__next {
     display: flex;
-    min-height: 100 vh;
+    min-height: 100vh;
     flex-direction: column;
   }
 
@@ -24,11 +26,13 @@ const GlobalStyle = createGlobalStyle`
     height: auto;
     display: block;
   }
+
+  ${AlurakutStyles}
 `
 
 const theme = {
   colors: {
-    primary: '#0070f3',
+    primary: 'red',
   },
 }
 
